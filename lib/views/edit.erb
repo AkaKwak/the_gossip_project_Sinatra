@@ -1,0 +1,31 @@
+<%#edit.erb %>
+<html>
+  <head>
+    <title>Éditer le potin</title>
+  </head>
+  <body>
+    <h1>Éditer le potin n°<%= id %></h1>
+
+    <form action="/gossips/<%= id %>/edit" method="post">
+      <!-- Champ pour l'auteur du potin -->
+      <div>
+        <label for="gossip_author">Auteur :</label>
+        <input type="text" id="gossip_author" name="gossip_author" value="<%= gossip.author %>">
+      </div>
+      
+      <!-- Champ pour le contenu du potin -->
+      <div>
+        <label for="gossip_content">Contenu :</label>
+        <textarea id="gossip_content" name="gossip_content"><%= gossip.content %></textarea>
+      </div>
+      
+      <!-- Bouton pour soumettre le formulaire et enregistrer les changements -->
+      <div>
+        <button type="submit">Enregistrer les modifications</button>
+      </div>
+    </form>
+
+    <!-- Lien pour revenir à la page d'affichage du potin -->
+    <a href="/gossips/<%= id %>">Annuler et revenir à la page du potin</a>
+  </body>
+</html>

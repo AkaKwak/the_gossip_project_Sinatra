@@ -1,0 +1,16 @@
+<%#show.erb %>
+<html>
+  <head>
+    <title>Page Potin : The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Voici la page du potin N°<%= id %></h1>
+  <p>
+    <strong>Son auteur:</strong><%= gossip.author %><br/>
+    <strong>Le contenu du potin:</strong><%= gossip.content %>
+  </p>
+   <a href="/gossips/<%= id %>/edit">Éditer le potin</a><br/>
+  <a href="/">Lien pour revenir à la page des potins</a>
+
+  </body>
+</html>
